@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network Type"
+        android:layout_margin="4dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Subhead"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgNetworkOptions"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+    <RadioButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/rbNoNetwork"
+     android:checked="true"
+     android:text="None"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbAnyNetwork"
+            android:checked="false"
+            android:text="Any"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbWifiNetwork"
+            android:checked="false"
+            android:text="Wifi"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requires:"
+        android:layout_margin="4dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Subhead"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Idle"
+            android:id="@+id/switchIdle"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Charging"
+            android:id="@+id/switchCharhing"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Override Deadline:"
+            android:layout_margin="4dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:id="@+id/tvSeekbarLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Set"
+            android:layout_margin="4dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:id="@+id/tvProgress"/>
+
+
+
+    </LinearLayout>
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_margin="4dp"/>
+
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/btnScheduleJob"
+       android:text="Schedule Job"
+       android:layout_margin="4dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnScheduleAsyncJob"
+        android:text=" Async Job"
+        android:layout_margin="4dp"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelBob"
+        android:text="Cancel Job"
+        android:layout_margin="4dp"/>
+
+
+
+
+
+</LinearLayout>
